@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 96.1%; /* #F5F5F5 */
+    --foreground: 0 0% 0%; /* #000000 */
+    --card: 0 0% 96.1%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 96.1%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 60 100% 50%; /* #FFFF00 */
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 60 100% 50%;
+    --radius: 0rem;
+  }
+  .dark {
+    /* For future dark mode, we can define dark theme variables here */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 98%;
+    --input: 0 0% 98%;
+    --ring: 60 100% 50%;
+  }
+  * {
+    @apply border-border;
+  }
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+@layer components {
+  .brutalist-border {
+    @apply border-2 border-black;
+  }
+  .brutalist-shadow {
+     box-shadow: 4px 4px 0px #000;
+  }
+  .brutalist-shadow-sm {
+     box-shadow: 2px 2px 0px #000;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 brutalist-border;
+  }
+  .btn:not(:disabled):hover {
+    @apply -translate-x-px -translate-y-px;
+    box-shadow: 5px 5px 0px #000;
+  }
+  .btn:not(:disabled):active {
+    @apply translate-x-px translate-y-px;
+    box-shadow: 2px 2px 0px #000;
+  }
+}
+
+/* Monaco Editor Brutalist Scrollbar */
+.monaco-editor .monaco-scrollable-element .scrollbar .slider {
+  background: #FFFF00 !important; /* brutalist-yellow */
+  border: 2px solid #000000;
+}
+
+.monaco-editor .monaco-scrollable-element .scrollbar {
+  background: #F5F5F5 !important; /* brutalist-gray */
+  border-left: 2px solid #000000;
+}
