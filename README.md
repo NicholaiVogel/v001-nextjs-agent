@@ -1,6 +1,6 @@
 # Agent Brutale
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NicholaiVogel/v001-nextjs-agent)
 
 Agent Brutale is a hyper-personalized AI coding assistant platform designed for web development, embracing a stark Brutalist aesthetic. It provides a seamless, integrated environment where developers can collaborate with a suite of specialized AI agents to build, modify, and deploy web applications using a Next.js, Tailwind CSS, and Shadcn/UI stack.
 
@@ -112,7 +112,7 @@ This project is configured for seamless deployment to Cloudflare Workers.
 
 Alternatively, deploy directly from your GitHub repository:
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NicholaiVogel/v001-nextjs-agent)
 
 ## Project Structure
 
